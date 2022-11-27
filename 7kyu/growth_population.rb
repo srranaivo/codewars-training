@@ -37,3 +37,43 @@
 # Don't forget to convert the percent parameter as a percentage
 # in the body of your function:
 # if the parameter percent is 2 you have to convert it to 0.02.
+
+# Best practice:
+def nb_year(p0, percent, aug, p)
+  # your code
+  n = 0
+  percent = percent * 0.01
+
+  while p0 < p
+    p0 += (p0 * percent).to_i + aug
+    n += 1
+  end
+
+  return n
+end
+
+# Other code:
+# def nb_year(p0, percent, aug, p)
+#   # your code
+# #years = 0
+# #until p0 >= p
+# #p0 += p0 * (percent / 100) + aug
+# #end
+# #return years
+# years = 0
+# target_pop = p0
+
+# until target_pop >= p
+#   target_pop = percent_increase(target_pop, percent) + ni_increase(target_pop, aug)
+#   years +=1
+# end
+# return years
+# end
+
+# def percent_increase(starting_pop, percentage)
+# (starting_pop * percentage / 100).floor
+# end
+
+# def ni_increase(starting_pop, ni_count)
+# starting_pop + ni_count
+# end
