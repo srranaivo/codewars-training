@@ -14,3 +14,33 @@
 
 # Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 # Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+# My code:
+class String
+  def toJadenCase
+    # ...
+    # on prend une string
+    # sur cette string on utilise la méthode .split
+    # qui va transformer chaque mot en
+    # string à part entière
+    # et mettre ses derniers dans un tableau
+    # on travaille ainsi dans un tableau de strings
+    # sur ce tableau on appelle la methode .map
+    # qui va transformer ce tableau en un
+    # nouveau tableau
+    # on veut que ce nouveau tableau contienne
+    # tous les strings en capitalize
+    # donc on utilise la méthode capitalize
+    # puis on veut à nouveau une string et
+    # non pas un tableau donc
+    # on utilis ela méthode .join(' ')
+    split.map { |i| i.capitalize }.join(' ')
+  end
+end
+
+# Best practice:
+# class String
+#   def toJadenCase
+#     self.split.map(&:capitalize).join(" ")
+#   end
+# end
