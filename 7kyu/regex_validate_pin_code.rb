@@ -18,3 +18,12 @@ def validate_pin(pin)
   # OU au nombre de 6
   pin.match?(/^\d{4}$|^\d{6}$/).to_s ? true : false
 end
+
+rgex = /^(\d{4}|\d{6})$/
+  if rgex && (pin.length === 4 || pin.length === 6)
+    return true
+  else
+    return false
+  end
+
+  /^(\d{4}|\d{6})$/
